@@ -1,0 +1,18 @@
+Nếu Material Type = SLIDE:
+    - Trường URL material sẽ null
+    - Mỗi phần tử slide có thông tin:
+        1. slide_avatar: link ảnh
+        4. order_in_material: thứ tự slide trong material
+Nếu Material Type = VIDEO:
+    - Trường URL material là 1 link video
+    - Mỗi phần tử slide có các thông tin
+        1. slide_avatar: link ảnh
+        2. slide_video_time: thời gian tua của slide (VD: 10 tức slide này chiếm 10s trong video)
+        3. slide_chunk: Vị trí bắt đầu của slide trong video material (VD: 1:30 là lúc 1 phút 30s sẽ tới slide này)
+        4. order_in_material: thứ tự slide trong material
+    => Khi next slide thì tua video tới đúng slide_chunk của nó và play video tại đó trong slide_video_time
+
+Nếu Material Type = PDF:
+    - Trường URL material là 1 link PDF
+    - Không hiển thị list slide
+    - View Pdf theo dạng cuộn từ trên xuống, có thể hiển thị được đang xem trang mấy của pdf thì tốt
